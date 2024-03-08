@@ -5,4 +5,15 @@ pipeline {
     }
   }
 stages{
-  stage()
+  stage('Clone repository') {
+    steps {
+      git branch: 'main',
+        URL: 'https://github.com/Arvinnooli/PES1UG21CS112_Jenkins.git'
+    }
+  }
+  stage('Install depemdencies'){
+    steps{
+      sh 'npm install'
+    }
+  }
+  
