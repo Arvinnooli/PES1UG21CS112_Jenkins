@@ -2,6 +2,16 @@ pipeline {
     agent any
     
     stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+                script {
+                    // Print contents of workspace directory
+                    sh 'ls -la'
+                }
+            }
+        }
+        
         stage('Build') {
             steps {
                 script {
@@ -19,8 +29,6 @@ pipeline {
                 }
             }
         }
-        
-        // Add more stages for deployment if needed
     }
     
     post {
