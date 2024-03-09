@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     // Print output of the compiled .cpp file
-                    sh './my_execute'
+                    sh './my_executable'
                     echo 'in Test'
                 }
             }
