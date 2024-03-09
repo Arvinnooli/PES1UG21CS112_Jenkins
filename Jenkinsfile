@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+                    python Arvin.py //error
                     sh 'g++ PES1UG21CS112-1.cpp -o PES1UG21CS112-1'
                 }
             }
