@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script {
                     // Compile the .cpp file using a shell script
-                    sh 'g++ -o my_executable ${WORKSPACE}/main/hello.cpp'
+                    sh 'g++ -o my_executable ${WORKSPACE}/main/hello1.cpp'
                     echo 'in Build'
                 }
             }
